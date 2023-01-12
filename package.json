@@ -1,8 +1,14 @@
 {
-  "name": "year_picker",
+  "name": "@chamoli/calendar",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.1",
+    "@shivamchamoli1997/calendar": "^1.0.2",
+    "@shivamchamoli1997/npm-package-manager": "^1.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^13.5.0",
@@ -18,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
   }
 }

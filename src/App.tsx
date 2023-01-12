@@ -1,25 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Calendar from "@shivamchamoli1997/calendar/dist";
+import {generateReport} from '@shivamchamoli1997/npm-package-manager/dist';
 
-function App() {
+interface CalendarPropsInterface {
+  type?: 'date' | 'month' | 'year';
+}
+
+function App(props: CalendarPropsInterface) {
+  function handleChange(event: any) {
+    console.log('handleChange*******************', event)
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Calendar type='date' onChange={handleChange} />
+    </>
   );
 }
 
